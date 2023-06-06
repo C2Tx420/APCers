@@ -8,8 +8,8 @@ export default function SignUpNFT() {
                 <img src={img1} alt="" />
             </div>
             <div className='signUpNFT__right'>
-                <h1 class="singup1">Create and sell your NFTS</h1>
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ac phasellus placerat a pellentesque tellus sed egestas. Et tristique dictum sit tristique sed non. Lacinia lorem id consectetur pretium diam ut. Pellentesque eu sit blandit fringilla risus faucibus.</h1>
+                <p class="singup1">Create and sell your NFTS</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ac phasellus placerat a pellentesque tellus sed egestas. Et tristique dictum sit tristique sed non. Lacinia lorem id consectetur pretium diam ut. Pellentesque eu sit blandit fringilla risus faucibus.</h1>
             </div>
         </div>
     )
