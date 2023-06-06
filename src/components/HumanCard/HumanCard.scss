@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.about{
+    margin-top: 140px;
+   
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+}
+.para1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.line1{
+    width :auto;
+    margin-top: 40px;
+   border-style:double;
+   color: purple;
+}
+
+.name{
+    margin-top: 150px;
+
+}
+
+.btn{
+    
+    position: relative;
+    top:50px;
+    left:20px;
+    border: double;
+    border-radius: 10%;
+    border-color: purple;
+
+}
+
+.card-image{
+    width:150px;
+    height : 150px;
+
+}
+
+.body{
+    min-height: 100vh ;
+    width :100%;
+    background-color:#3D00B7 ;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.humanCard{
+    width :300px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+  
+
+}
