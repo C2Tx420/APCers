@@ -1,11 +1,9 @@
 import React from 'react'
 import './AmazeNFT1.scss'
 export default function AmazeNFT2() {
-
     return (
-
         <div>
-              <div>
+            <div>
                 <p className="background"><svg width="1440" height="326" viewBox="0 0 1440 326" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_b_0_185)">
                         <rect width="1440" height="326" fill="#D9E0EC" fill-opacity="0.2" />
@@ -52,7 +50,7 @@ export default function AmazeNFT2() {
                 <h1 class="amaze4">Growth Transaction</h1>
                 <h1 class="amaze5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus</h1>
             </div>
-          
+
         </div>
 
 

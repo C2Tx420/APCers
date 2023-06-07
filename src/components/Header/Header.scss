@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    &__brand {
+        color: #3d00b7;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    &__menu {
+        margin-left: 60px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        &-item {
+            a {
+                text-decoration: none;
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2.1rem;
+                letter-spacing: 0.04em;
+
+                color: #000000;
+            }
+        }
+    }
+}

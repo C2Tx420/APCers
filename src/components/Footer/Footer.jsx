@@ -1,9 +1,9 @@
 import React from 'react'
 import './Footer.scss'
 
-export default function Footer1(){
+export default function Footer() {
     return (
-        <div className='Footer-big'>
+        <footer className='Footer-big'>
             <div className='Footer-con'>
                 <div>
                     <h1 className='APCERS'>APCERS</h1>
@@ -33,14 +33,14 @@ export default function Footer1(){
                 <div>
                     <h1 className='SITL'>Stay In The Loop</h1>
                     <p className='JOIN'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating NFTs.</p>
-                    <div className='REC'><input className='ENTER'/><p> Enter your email address</p></div>
+                    <div className='REC'><input className='ENTER' /><p> Enter your email address</p></div>
                 </div>
-            </div> 
+            </div>
             <p className='line'></p>
             <div className='no'><p>Copyright © 2022 Avi Yansah</p></div>
-            
-        </div>
-        
+
+        </footer>
+
     )
 
 }
