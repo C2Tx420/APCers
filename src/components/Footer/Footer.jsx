@@ -22,8 +22,8 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className='footer__top-item'>
-                    <h1 className='MA'>My Account</h1>
-                    <ul className='PF'>
+                    <h1 className='title'>My Account</h1>
+                    <ul className='list'>
                         <li><a>Profile</a></li>
                         <li><a>Favorite</a></li>
                         <li><a>My Collections</a></li>
@@ -31,13 +31,11 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className='footer__top-item'>
-                    <p className='SITL'>Stay In The Loop</p>
-                    <p className='JOIN'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating NFTs.</p>
-                    <div className='REC'><input className='ENTER' /><p> Enter your email address</p></div>
+                    <p className='title'>Stay In The Loop</p>
+                    <p className='desc-s'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating NFTs.</p>
                 </div>
             </div>
-            <p className='line'></p>
-            <div className='no'><p>Copyright © 2022 Avi Yansah</p></div>
+            <div className='footer__bottom'><p>Copyright © 2022 Avi Yansah</p></div>
 
         </footer>
 

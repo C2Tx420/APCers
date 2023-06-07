@@ -32,6 +32,12 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 160%;
+
+            &-s {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 160%;
+            }
         }
 
         .title {
@@ -50,23 +56,14 @@
             }
         }
     }
-}
 
-.line {
-
-    border: 1px solid #F4F4F4;
-}
-
-/* Copyright © 2022 Avi Yansah */
-
-.no {
-    padding: 20px 0px;
-    font-family: 'Averta Demo PE Cutted Demo';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    /* or 22px */
-
-
-    color: #A4A4A4;
+    &__bottom {
+        border-top: 1px solid #F4F4F4;
+        padding: 20px;
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            color: #A4A4A4;
+        }
+    }
 }
