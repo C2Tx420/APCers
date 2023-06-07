@@ -1,15 +1,12 @@
 import React from 'react'
+import './Home.scss'
+import AmazeNFT from '../../components/AmazeNFT/AmazeNFT'
 
 export default function Home() {
   return (
     <main className="home">
-      <section className="hero container">
-        <div>Home</div>
-      </section>
-      <section className="hero container-fluid">
-        <div className="container">
-          <div>Home</div>
-        </div>
+      <section className="amaze-section container-fluid">
+        <AmazeNFT/>
       </section>
     </main>
   )
