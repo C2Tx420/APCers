@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./HumanCard.scss";
 import img1 from "../../assets/img/ava1.jpeg";
 

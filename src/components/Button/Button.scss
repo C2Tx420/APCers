@@ -1,124 +1,22 @@
-
-#UpLoad {
+.btn {
     border-radius: 60px;
-    background: #3D00B7;
-    color: white;
+    border: none;
 
-    font-weight: bold;
-    font-size: 12px;
-    margin-left: 1070px;
-    margin-top: 29px;
-    padding: 14px 32px;
-}
+    &.m {
+        padding: 18px 40px;
+        font-size: 1.4rem;
+        line-height: 100%;
+        font-weight: 700;
+    }
 
-#ConnectWallet {
-    border-radius: 60px;
-    color: #3D00B7;
-    border: 2.2px solid #3D00B7;
-    font-weight: bold;
-    font-size: 12px;
-    border-image-width: 25px ;
-    margin-left: 15px;
-    margin-top: 23px;
-    padding: 12.9px 25px;
-}
+    &.bordered {
+        background-color: transparent;
+        border: 2px solid #3D00B7;
+        color: #3D00B7;
+    }
 
-// #ConnectWallet {
-//   border-radius: 60px;
-//   color: #3D00B7;
-//
-//   background: white;
-//   font-weight: bold;
-//   font-size: 12px;
-//   border-image-width: 25px ;
-//    margin-left: 15px;
-//    margin-top: 23px;
-//    padding-left: 25px;
-//    padding-right: 25px;
-//    padding-bottom: 14px;
-//    padding-top: 14px;  
-
-.EvS {
-    border-radius: 60px;
-    background: #3D00B7;
-    color:white;
-    font-size: 16px;
-    font-weight: bold;
-    border-image-width: 25px ;
-    margin-left: 121px;
-    margin-top: 290px;
-    padding: 17px 34px;
-}
-
-#placeabid1{
-    border-radius: 50px;
-    background: #3D00B7;
-    color: white;
-    font-size: 12px;
-    margin-top: 29px;
-    margin-left: 20px;
-    padding: 12px 17.5px;
-}
-
-.placeabid23{
-    border-radius: 50px;
-    background: white;
-    color: #220970;
-    font-size: 12px;
-    margin-top: 29px;
-    margin-left: 20px;
-    padding: 12px 17.5px;
-}
-
-.total54items {
-    border-radius: 50px;
-    background: white;
-    color: #2639ED;
-    font-size: 12px;
-    margin-top: 29px;
-    margin-left: 20px;
-    padding: 5.5px 6px;
-
-}
-
-#AllCategories {
-    border-radius: 50px;
-    background: #3D00B7;
-    color: white;
-    font-size: 12px;
-    margin-top: 29px;
-    margin-left: 20px;
-    padding : 8px 17.5px;
-}
-
-.DMN {
-    border-radius: 100px;
-    background: rgba(220, 220, 220, 0.2);;
-    color: #DCDCDC 20%;
-    font-size: 12px;
-    margin-top: 29px;
-    margin-left: 20px;
-    padding : 8px 20px;
-}
-
-#MoreNFTs {
-    border-radius: 60px;
-    background: #FFFFFF;
-    color:#4F33A3;;
-    font-size: 16px;
-    font-weight: bold;
-    border-image-width: 25px ;
-    margin-left: 121px;
-    margin-top: 290px;
-    padding: 17px 34px;
-}
-
-#Last {
-    border-radius: 50px;
-    background: #2639ED;
-    color: #FFFFFF;
-    font-size: 12px;
-    margin-top: 29px;
-    margin-left: 20px;
-    padding : 10px 21px;
+    &.colored {
+        background: #3D00B7;
+        color: #fff;
+    }
 }

@@ -16,7 +16,10 @@ export default function Header() {
                     <a href="#">About</a>
                 </li>
             </ul>
-            <Button>Upload</Button>
+            <div className="header__btn-group">
+                <Button>Upload</Button>
+                <Button color='bordered'>Connect Wallet</Button>
+            </div>
         </header>
     )
 }
