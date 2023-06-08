@@ -1,0 +1,10 @@
+@mixin hoverLink {
+    a {
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            color: #3d00b7;
+            transition: .2s;
+        }
+    }
+}
