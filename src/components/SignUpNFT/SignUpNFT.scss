@@ -1,7 +1,7 @@
 .signupNFT {
     display: flex;
     height: 600px;
-    padding: 120px 0;
+    margin: 120px 0;
     gap: 40px;
 
     &__left {
@@ -12,7 +12,7 @@
             position: absolute;
 
             &:nth-child(1) {
-                top: -33%;
+                top: 0;
                 left: 0;
                 width: 260px;
                 height: 280px;
@@ -27,7 +27,7 @@
             }
 
             &:nth-child(3) {
-                bottom: -20%;
+                bottom: 0;
                 left: 25%;
                 width: 180px;
                 height: 200px;
