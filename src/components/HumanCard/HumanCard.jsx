@@ -1,9 +1,5 @@
 import "./HumanCard.scss";
 import img1 from "../../assets/img/ava1.jpeg";
-import icon1 from '../../assets/img/Facebook.png'
-import icon2 from '../../assets/img/Linhked.png'
-import icon3 from '../../assets/img/Twiter.png'
-
 
 export default function HumanCard() {
   return (
