@@ -5,24 +5,24 @@ export default function AmazeNFT() {
     return (
         <div className='amazeNFT container'>
             <div className='amazeNFT__item'>
-                <p class="amazeNFT__item-title"> The amazing NFT art of the world here </p>
+                <p className="amazeNFT__item-title"> The amazing NFT art of the world here </p>
             </div>
 
             <div className='amazeNFT__item'>
                 <img src={amazeImg1} alt="" />
 
-                <div class="amazeNFT__item-info" >
+                <div className="amazeNFT__item-info" >
                     <p className="amazeNFT__item-info-title">Fast Transaction</p>
 
-                    <p class="amazeNFT__item-info-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus imperdiet.</p>
+                    <p className="amazeNFT__item-info-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus imperdiet.</p>
                 </div>
             </div>
             <div className='amazeNFT__item'>
                 <img src={amazeImg2} alt="" />
-                <div class="amazeNFT__item-info" >
+                <div className="amazeNFT__item-info" >
                     <p className="amazeNFT__item-info-title">Growth Transaction</p>
 
-                    <p class="amazeNFT__item-info-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus.</p>
+                    <p className="amazeNFT__item-info-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus.</p>
                 </div>
             </div>
 
