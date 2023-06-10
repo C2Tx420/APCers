@@ -44,10 +44,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 150px;
     cursor: default;
 
+    &__info{
+        display: flex;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img{
+            width: 20%;
+            height: 100%;
+            object-fit: contain;
+        }
+        p{
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+    }
+
     &__walletid {
-        max-width: 150px;
+        width: 100%;
         font-weight: 700;
         text-overflow: ellipsis;
         white-space: nowrap;
