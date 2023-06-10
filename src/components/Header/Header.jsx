@@ -20,6 +20,7 @@ export default function Header() {
             if(walletAddress) {
                 // const balance = await WalletService.getBalance(walletAddress);
                 // console.log(balance.result[0])
+                const mbe = balance.result.find((token)=> token.address === '5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6');
                 setWalletBalance({
                     "address": "5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6",
                     "balance": 100,
