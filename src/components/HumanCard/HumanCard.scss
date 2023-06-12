@@ -1,240 +1,36 @@
-// *{
-//     margin:0;
-//     padding:0;
-//     box-sizing: border-box;
-//     font-family: 'Courier New', Courier, monospace;
-// }
-
-
-
-
- .HumanCard-about{
-     margin-top: 130px;
-    font-weight:   300px solid;
-     text-align: center;
-     font-family: 'Courier New', Courier, monospace;
-     font-size: 55px;
- }
- .HumanCard-para1{
-     text-align: center;
-     margin-top: 20px;
-     font-size: 20px;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
- }
- .HumanCard-line1{
-   
-     margin-top: 20px;
-    border-style:double ;
-    color: purple;
- }
-
-
-
-// // .btn{
-    
-// //     position: relative;
-// //     top:50px;
-// //     left:20px;
-// //     border: double;
-// //     border-radius: 10%;
-// //     border-color: purple;
-
-// // }
-
-
-
-// // .body{
-// //     min-height: 100vh ;
-// //     width :100%;
-// //     background-color:#3D00B7 ;
-// //     display:flex;
-// //     justify-content:center;
-// //     align-items: center;
-// // }
-
-// .humanCard{
-//     width :300px;
-//     background-color: antiquewhite;
-//     border-radius: 8px;
-// }
-  .HumanCard-container {
-
-        margin-top:150px;
-         height:20%;
-         display:flex;
-        justify-content: center;
-         align-items: center; 
-         
-       
-      
-  }
-  .HumanCard-container img {
-        
-         border-radius: 50%;
-        // text-align: center;
-         margin-top:30px;
-         margin-left: 60px;
-        margin-bottom: 50px;
-        //width:20vw;
-        height:20vh;
-        width: 10vw;
-        
-        background-repeat:no repeat;
-        background-position: center;
-
-  }
-
- .HumanCard-container p{
-   margin-top: 20px;
-     margin-left:40px;
-     font-size: 15px;
-     margin-right: 60px;
-     justify-content: space-between;
-     text-align: center;
-     //text-align: justify;
-     padding:5px;
- }
- 
- 
- .HumanCard-box1{
-    
-    height:400px;
-    width:280px;
-    
-    box-shadow: 0 0 50px #d3d3c1, 0 0 0 10px #f4eeeeeb;
-   // background: linear-gradient(315deg,#03a9f4,#ff0058);
-   // border:3px solid rgb(80, 79, 79);
-   background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-topbox1{
-    height:50%;
-    background: linear-gradient(315deg,#15d682,#21c319);
- }
- .Humancard-botbox1{
-    height:50%;
-    background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-namebox1{
-    font-display: center;
-    text-align: center;
-    font-weight: bold;
-    padding:3px;
-    border-radius: 50px;
-    background-color: #f0a90f;
-   
- }
-
- .HumanCard-box2{
-    
-    height:400px;
-    width:280px;
-    box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f4eeeeeb;
-   // background: linear-gradient(315deg,#03a9f4,#ff0058);
-   // border:3px solid rgb(80, 79, 79);
-   background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-topbox2{
-    height:50%;
-    background: linear-gradient(315deg,#08a5ee,#25cff1);
- }
- .Humancard-botbox2{
-    height:50%;
-    background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-namebox2{
-    font-display: center;
-    text-align: center;
-    font-weight: bold;
-    padding:3px;
-    border-radius: 50px;
-    background-color: #f0a90f;
-   
- }
- 
- .HumanCard-box3{
-    
-    height:400px;
-    width:280px;
-    box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f4eeeeeb;
-    //background: linear-gradient(315deg,#03a9f4,#ff0058);
-   // border:3px solid rgb(80, 79, 79);
-   background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-topbox3{
-    height:50%;
-    background: linear-gradient(315deg,#ac4505,#eb7506);
- }
- .Humancard-botbox3{
-    height:50%;
-    background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-namebox3{
-    font-display: center;
-    text-align: center;
-    font-weight: bold;
-    padding:3px;
-    border-radius: 50px;
-    background-color: #f0a90f;
-   
- }
-
-
- .HumanCard-box4{
-    height:400px;
-    width:280px;
-    box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f4eeeeeb;
-   // background: linear-gradient(315deg,#03a9f4,#ff0058);
-   background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-topbox4{
-    height:50%;
-    background: linear-gradient(315deg,#03a9f4,#ff0058);
- }
- .Humancard-botbox4{
-   
-    height:50%;
-    background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-namebox4{
-    font-display: center;
-    text-align: center;
-    font-weight: bold;
-    padding:3px;
-    border-radius: 50px;
-    background-color: #f0a90f;
-   
- }
- 
- .HumanCard-box5{
-    height:400px;
-    width:280px;
-    box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f4eeeeeb;
-   // background: linear-gradient(315deg,#03a9f4,#ff0058);
-   background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-topbox5{
-    height:50%;
-    background: linear-gradient(315deg,#e11d8c,#df1eaf);
- }
- .Humancard-botbox5{
-   
-    height:50%;
-    background: linear-gradient(315deg,#eff1e5,#ecf0eb);
- }
- .Humancard-namebox5{
-    font-display: center;
-    text-align: center;
-    font-weight: bold;
-    padding:3px;
-    border-radius: 50px;
-    background-color: #f0a90f;
-   
- }
-
-
-  
-
-
-
-
+.humancard{
+   padding: 10px 10px 40px;
+   height: 100%;
+   // width: 20%;
+   margin-right: 20px;
+   background-color: #fff;
+   img {
+      width: 100%;
+      object-fit: cover;
+   }
+   &__bottom{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .name{
+         font-size: 2.4rem;
+         font-weight: 700;
+      }
+      .role{
+         padding: 4px 14px;
+         background-color: #FFC62B;
+         border-radius: 12px;
+         -webkit-border-radius: 12px;
+         -moz-border-radius: 12px;
+         -ms-border-radius: 12px;
+         -o-border-radius: 12px;
+         font-size: 1.5rem;
+         font-weight: 700;
+      }
+      .desc {
+         text-align: center;
+      }
+   }
+}
