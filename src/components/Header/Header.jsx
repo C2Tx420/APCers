@@ -3,24 +3,27 @@ import './Header.scss'
 import Button from '../Button/Button'
 import { WalletService } from '../../services/wallet.service';
 import { Link } from 'react-router-dom';
+import { ShyftService } from '../../services/shyft.service';
 export default function Header() {
-    const [walletAddress, setwalletAddress] = useState(()=>{
+
+    const [walletAddress, setWalletAddress] = useState(() => {
         const walletAddress = localStorage.getItem('walletAddress');
-        if(walletAddress) {
-            return walletAddress;
-        } else{
+        if (walletAddress) {
+            return walletAddress
+        } else {
             return '';
         }
     });
-    const [walletBalance,setWalletBalance] = useState('');
+    const [listNFT, setListNFT] = useState('')
+    const [walletBalance, setWalletBalance] = useState('');
     const [loadingConnect, setLoadingConnect] = useState(false);
 
-    useEffect(()=>{
-        (async ()=>{
-            if(walletAddress) {
-                // const balance = await WalletService.getBalance(walletAddress);
-                // console.log(balance.result[0])
-                const mbe = balance.result.find((token)=> token.address === '5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6');
+    useEffect(() => {
+        (async () => {
+            // const getListNFT = await ShyftService.getActiveListings()
+            // setListNFT(getListNFT.data)
+            if (walletAddress && !walletBalance) {
+                // getBalance(walletAddress);
                 setWalletBalance({
                     "address": "5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6",
                     "balance": 100,
@@ -35,13 +38,34 @@ export default function Header() {
             }
         })();
 
-    },[])
+    }, [])
+
+    const test = () => {
+        ShyftService.signContract(
+            'AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAkPEj5fR8DaCStheKVt54Qse0cq36lDmiACLKWim8td0JZsiRbWvd7kjKQcoSOKjqgg1bot463uB63nB6aUgMGFEpq/9fBINGHRLqY5nXXEdk3gbtwBw2K5R3Mt/Cu9cVe7wCdHHv2zH9Y1VygPH+srmGpgUvYupbMUt48l+g3bpPvDqeYEb/Rg3oMafI7pBdOwFUCmAEF9gEL0lHK0oiysaMoAenHeXxOwEORRKfXCnGQBnpENBBpuQDD20knlnNK8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACiyA4YcFMCiFYfr3Z5KF+LqYGnYKLYB4pWc693ivih8MnvOL+kEGyZMjK9SmqE5anVWmtYZn5efKXhdPOWcJz41dz8QfeVhkVNt5z0L963+gcdM7DppcBM+UxlazknbHEKZZOGPLpGFWTq5BNzchVG6wFRyTCCdrvUrSocOkIQe/QkXpd1kxJfsVlBtsCpJgr0Q4vNEDVSkqQLBd+H9dUgBqfVFxh70WY12tQEVf3CwMEkxo8hVnWl27rLXwgAAAAGp9UXGSxcUSGMyUw9SvF/WNruCJuh/UTj29mKAAAAAAbd9uHXZaGT2cvhRs7reawctIXtX1s3kTqM9YV+/wCpC/kPuH4ZkF0RcqSjWaItZG5nPP1rzt6IE3hqM6apdFQCCgwAAQkIBwIDBQ4GCw0bM+aFpAF/g63+//8A0O2QLgAAAAEAAAAAAAAACgUEAAYNDAnPayygS97DG/8=')
+    }
+
+    const getBalance = async (walletAddress) => {
+        // const balance = await ShyftService.getBalance(walletAddress)
+        // setWalletBalance(balance);
+        setWalletBalance({
+            "address": "5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6",
+            "balance": 100,
+            "associated_account": "9ZeBHgQoVemfJC2jEt8yRmXetWYhaE1U9ktifVGitUho",
+            "info": {
+                "name": "Mungbean",
+                "symbol": "MBE",
+                "image": "https://nftstorage.link/ipfs/bafkreifcspzy7hibi7dzo5rxjjfy7nkbfgj2njs2oky5skt4rn7gq2lgoa",
+                "decimals": 9
+            }})
+    }
 
     const handleConnect = async () => {
         setLoadingConnect(true);
-        const walletAddress = await WalletService.solanaConnect();
-        if (walletAddress) {
-            setwalletAddress(walletAddress);
+        const wallet = await WalletService.solanaConnect();
+        if (wallet) {
+            setWalletAddress(wallet);
+            getBalance(wallet.address)
         }
         setLoadingConnect(false);
     }
@@ -63,8 +87,8 @@ export default function Header() {
                 </li>
             </ul>
             <div className="header__btn-group">
-                <Button>Upload</Button>
-                {!walletAddress && !walletBalance ?
+                <Button onClick={test}>Upload</Button>
+                {!walletAddress || !walletBalance ?
                     <Button color='bordered' onClick={handleConnect} disable={loadingConnect}>Connect Wallet</Button>
                     :
                     <div className="profile">

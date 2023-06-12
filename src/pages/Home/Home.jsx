@@ -12,6 +12,9 @@ export default function Home() {
       <section className="signup-section container">
         <SignUpNFT />
       </section>
+      <section className="team-section container">
+        <h3>Our team</h3>
+      </section>
     </main>
   )
 }
