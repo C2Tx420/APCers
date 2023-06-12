@@ -95,7 +95,7 @@ export default function Header() {
                     <a onClick={()=>handleGoto('team-section')}>Team</a>
                 </li>
                 <li className="header__menu-item">
-                    <a >About</a>
+                    <a onClick={()=>handleGoto('signup-section')}>About</a>
                 </li>
             </ul>
             <div className="header__btn-group">
