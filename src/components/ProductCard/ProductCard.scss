@@ -35,21 +35,22 @@
             margin-bottom: 10px;
         }
 
-        .desc {
-            margin-bottom: 20px;
-            flex: 1;
-        }
-
         .price {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
             color: #00AC4F;
-            margin-left: auto;
+            flex: 1;
             span {
-                font-size: 1.2rem;
-                line-height: 1.4rem;
                 margin-left: 4px;
             }
+        }
+        .btn-wrapper{
+            margin-top: 40px;
+            border-top: 1px solid #ccc;
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
         }
     }
     &:hover{
