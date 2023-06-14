@@ -9,7 +9,7 @@ export default function ProductCard({data}) {
 
     const handleGoTo = (e) => {
       e.stopPropagation();
-      navigate(`/product/${data.nft_address}`)
+      navigate(`/product/${nftData.mint}`)
 
     }
   return (
