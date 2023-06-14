@@ -1,8 +1,10 @@
 @import '/src/assets/scss/mixin.scss';
+
 .header {
     display: flex;
     align-items: center;
     padding: 40px 0;
+
     &__brand {
         color: #3d00b7;
         font-weight: 700;
@@ -18,6 +20,7 @@
 
         &-item {
             @include hoverLink;
+
             a {
                 text-decoration: none;
                 font-style: normal;
@@ -29,10 +32,43 @@
             }
         }
     }
+
     &__btn-group {
         margin-left: auto;
         display: flex;
         gap: 20px;
     }
+}
 
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 150px;
+    cursor: default;
+
+    &__info{
+        display: flex;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img{
+            width: 20%;
+            height: 100%;
+            object-fit: contain;
+        }
+        p{
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__walletid {
+        width: 100%;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }

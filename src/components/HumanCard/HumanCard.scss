@@ -1,103 +1,36 @@
-// *{
-//     margin:0;
-//     padding:0;
-//     box-sizing: border-box;
-//     font-family: 'Courier New', Courier, monospace;
-// }
-
-
-
-
-// .about{
-//     margin-top: 120px;
-   
-//     text-align: center;
-//     font-family: 'Courier New', Courier, monospace;
-//     font-size: 45px;
-// }
-// .para1{
-//     text-align: center;
-//     margin-top: 20px;
-//     font-size: 20px;
-//     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-// }
-// .line1{
-//     margin-top: -60px;
-//    border-style:double ;
-//    color: purple;
-// }
-
-
-
-// // .btn{
-    
-// //     position: relative;
-// //     top:50px;
-// //     left:20px;
-// //     border: double;
-// //     border-radius: 10%;
-// //     border-color: purple;
-
-// // }
-
-
-
-// // .body{
-// //     min-height: 100vh ;
-// //     width :100%;
-// //     background-color:#3D00B7 ;
-// //     display:flex;
-// //     justify-content:center;
-// //     align-items: center;
-// // }
-
-// .humanCard{
-//     width :300px;
-//     background-color: antiquewhite;
-//     border-radius: 8px;
-// }
-//  .container {
-//        margin-top:50px;
-//         height:20%;
-//         display:flex;
-//         justify-content: center;
-//         align-items: center; 
-       
-      
-//  }
-//  .container img {
-//         border-radius: 50%;
-//         text-align: justify;
-//         margin-top:60px;
-//         margin-left: 10px;
-//         width:20vw;
-//         height:20vh;
-//         width:20vh;
-        
-//  }
-
-// .container p{
-//     margin-left:5px;
-//     font-size: 20px;
-//     margin-right: 70px;
-//     justify-content: space-between;
-//     text-align: justify;
-// }
- 
-// .box{
-    
-//     border: 4px solid #3D00B7;
-
-// }
-// .box2{
-//     border:4px solid #3D00B7;
-// }
-// .box3{
-//     border:4px solid #3D00B7;
-// }
-// .box4{
-//     border:4px solid #3D00B7;
-// }
-
-
+.humancard{
+   padding: 10px 10px 40px;
+   height: 100%;
+   // width: 20%;
+   margin-right: 20px;
+   background-color: #fff;
+   img {
+      width: 100%;
+      object-fit: cover;
+   }
+   &__bottom{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .name{
+         font-size: 2.4rem;
+         font-weight: 700;
+      }
+      .role{
+         padding: 4px 14px;
+         background-color: #FFC62B;
+         border-radius: 12px;
+         -webkit-border-radius: 12px;
+         -moz-border-radius: 12px;
+         -ms-border-radius: 12px;
+         -o-border-radius: 12px;
+         font-size: 1.5rem;
+         font-weight: 700;
+      }
+      .desc {
+         text-align: center;
+      }
+   }
+}

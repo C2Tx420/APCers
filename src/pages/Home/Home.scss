@@ -2,4 +2,15 @@
     background: rgba(217, 224, 236, 0.2);
     backdrop-filter: blur(25px);
     padding: 100px 0;
+}.team-section {
+    background-color: #F4F3EA;
+    padding: 40px 0;
+    h3{
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+    .teamlist{
+        padding: 40px 0;
+    }
 }
