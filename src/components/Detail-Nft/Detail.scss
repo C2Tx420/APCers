@@ -1,0 +1,66 @@
+body{
+    background-color: black;
+    text-align: center;
+    
+} 
+
+.Detail-section{
+    display:block;
+    display:flex;
+    margin-left: 300px;
+    margin-top: 100px;
+    
+}
+
+.Detail-img{
+    height:500px;
+   
+
+}
+
+.Detail-infor{
+   text-align: justify;
+   color:white;
+    margin-left:80px;
+}
+
+.Detail-RedO{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.Detail-para{
+    font-size:12px;
+    margin-top: 50px;
+    color:gray;
+}
+
+.Detail-creator{
+ margin-top: 80px;
+ font-size: 15px;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Detail-mininame{
+    margin-top: 10px;
+    display:flex;
+
+}
+
+.name{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.Detail-btn{
+    height:40px;
+    width:120px;
+    margin-top: 100px;
+    border-radius: 30px;
+    font-weight: bold;
+    color:white;
+ background-color: rgb(195, 13, 71);
+}
