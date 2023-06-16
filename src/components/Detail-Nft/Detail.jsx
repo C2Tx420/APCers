@@ -20,7 +20,7 @@ return (
 
                 <div className='Detail-mininame'>
                         <img src={img2} alt="" />
-                        <p className='name'>Jonh Wick</p>
+                        <p className='name1'>Jonh Wick</p>
                 </div>
 
 
