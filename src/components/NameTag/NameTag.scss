@@ -1,52 +1,58 @@
-.NameTag-container{
-    background-color:  #000000;
+.NameTag-container {
+    background-color: #000000;
     display: inline-block;
-   border-radius: 22px;
     padding-bottom: 20px;
     position: relative;
-}
-.NameTag-img{
-    padding: 20px ;
-}
-.NameTag-info{
-    margin-left: 30px;
-    
-    padding: 10px 0px;
-}
-.NameTag-info p{
-    padding: 5px 0px;
-    font-weight: bold;
+    border-radius: 22px;
 
-}
-.NameTag-title {
-    font-size: 20px;
-    color: white;
-}
-.NameTag-price{
-    font-size: 15px;
-    color: gray ;
-}
-.NameTag-status{
-    font-size: 15px;
-    color: green;
-}
-.NameTag-saleoff{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 20px;
-    text-align: center;
-    background-color: yellow;
-    border-radius: 22px 0px 0px 22px;
-    margin-top: 28px ;
-    margin-right: 32px;
-    align-items: center;
-}
-.NameYag-saleoff-percent{
-    color: #00aeff;
-    font-weight: 600;
-    font-size: 20px;
-    position: relative;
-    top: 1px;
+    .NameTag-img {
+        padding: 20px;
+    }
+
+    .NameTag-info {
+        margin-left: 30px;
+        padding: 10px 0px;
+
+        p {
+            padding: 5px 0px;
+            font-weight: bold;
+        }
+
+        .NameTag-title {
+            font-size: 20px;
+            color: white;
+        }
+
+        .NameTag-price {
+            font-size: 15px;
+            color: gray;
+        }
+
+        .NameTag-status {
+            font-size: 15px;
+            color: green;
+        }
+    }
+
+    .NameTag-saleoff {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        background-color: yellow;
+        border-radius: 22px 0px 0px 22px;
+        margin-top: 28px;
+        margin-right: 32px;
+        align-items: center;
+
+        .NameYag-saleoff-percent {
+            color: #00aeff;
+            font-weight: 600;
+            font-size: 20px;
+            position: relative;
+            top: 1px;
+        }
+    }
 }
