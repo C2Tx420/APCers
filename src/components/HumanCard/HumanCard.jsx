@@ -1,5 +1,4 @@
 import "./HumanCard.scss";
-import img1 from "../../assets/img/ava1.jpeg";
 
 export default function HumanCard({ img, name, role, desc }) {
   return (
