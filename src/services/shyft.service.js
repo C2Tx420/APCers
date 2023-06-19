@@ -35,6 +35,7 @@ export const ShyftService = {
     });
     return encoded_transaction;
   },
+  getNftbyMint: async (id) => await shyft.nft.getNftByMint({ mint: id }),
   signContract: async ( encodedTransaction) => {
     const wallet =  new PhantomWalletAdapter();
     await wallet.connect();

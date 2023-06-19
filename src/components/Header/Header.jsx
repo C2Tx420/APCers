@@ -14,14 +14,11 @@ export default function Header() {
             return '';
         }
     });
-    const [listNFT, setListNFT] = useState('')
     const [walletBalance, setWalletBalance] = useState('');
     const [loadingConnect, setLoadingConnect] = useState(false);
 
     useEffect(() => {
         (async () => {
-            // const getListNFT = await ShyftService.getActiveListings()
-            // setListNFT(getListNFT.data)
             if (walletAddress && !walletBalance) {
                 // getBalance(walletAddress);
                 setWalletBalance({
