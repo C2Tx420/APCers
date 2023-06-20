@@ -6,7 +6,6 @@ import HumanCard from '../../components/HumanCard/HumanCard';
 import Slider from 'react-slick';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { ShyftService } from '../../services/shyft.service';
-import NFTmarket from '../../components/NFTmarket/NFTmarket';
 
 export default function Home() {
 
