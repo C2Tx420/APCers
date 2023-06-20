@@ -277,7 +277,7 @@ export default function Detail() {
         <h2 className='detail__title'>Related</h2>
         <div className="related__wrapper">
           {related && related.map((itemData, idx) => (
-            <ProductCard data={itemData} key={idx} />
+            <ProductCard className={'border'} data={itemData} key={idx} />
           ))}
         </div>
       </div>

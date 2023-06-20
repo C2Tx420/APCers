@@ -3,7 +3,7 @@ import './ProductCard.scss'
 import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 
-export default function ProductCard({data}) {
+export default function ProductCard({data,className}) {
     const nftData = data.nft;
     const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ export default function ProductCard({data}) {
 
     }
   return (
-    <div onClick={(e)=>handleGoTo(e)} className="product-card">
+    <div onClick={(e)=>handleGoTo(e)} className={`${className} product-card`}>
         <img src={nftData.image_uri} alt="" />
       <div className="product-card__bottom">
         <p className="name">{nftData.name}</p>
