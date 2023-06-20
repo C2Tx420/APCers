@@ -58,8 +58,10 @@
 
         .related {
             &__wrapper {
-                display: flex;
-                gap: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                row-gap: 20px;
+                column-gap: 20px;
             }
         }
     }
