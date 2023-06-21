@@ -3,7 +3,7 @@ import "./NameTag.scss"
 import img1 from "../../assets/img/NFT.png"
 export default function () {
   return (
-    <div className='NameTag-container'>
+    <section className='NameTag-container'>
         {/* NameTag image */}
         <div className='NameTag-img'>
         <img src={img1} />
@@ -17,8 +17,7 @@ export default function () {
         {/* NameTag Sale */}
         <div className='NameTag-saleoff'>
           <p className='NameYag-saleoff-percent'>sale 15%</p>
-        
         </div>
-    </div>
+    </section>
   )
 }

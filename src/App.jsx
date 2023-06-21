@@ -2,16 +2,12 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import DefaultLayout from './layout/defaultLayout/DefaultLayout';
 import About from './pages/About/About';
+import NameTag from './components/NameTag/NameTag';
 
 function App() {
 
   return (
-    <Routes>
-      <Route element={<DefaultLayout/>}>
-      <Route path='' element={<Home />} />
-      <Route path='/about' element={<About />} />
-      </Route>
-    </Routes>
+    <NameTag></NameTag>
   )
 }
 export default App
