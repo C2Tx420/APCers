@@ -4,11 +4,12 @@ import App from './App.jsx'
 import './assets/scss/reset.scss'
 import './main.scss'
 import { BrowserRouter } from 'react-router-dom'
+import ProviderWrapper from './context/ProviderWrapper.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ProviderWrapper>
+        <App />
+      </ProviderWrapper>
     </BrowserRouter>
-  </React.StrictMode>,
 )
