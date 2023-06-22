@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './Header.scss'
 import Button from '../Button/Button'
 import { WalletService } from '../../services/wallet.service';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShyftService } from '../../services/shyft.service';
+import { WalletContext } from '../../context/WalletContext';
 export default function Header() {
     const navigate = useNavigate();
-    const [walletAddress, setWalletAddress] = useState(() => {
-        const walletAddress = localStorage.getItem('walletAddress');
-        if (walletAddress) {
-            return walletAddress
-        } else {
-            return '';
-        }
-    });
+    const {walletAddress,setWalletAddress} = useContext(WalletContext);
     const [walletBalance, setWalletBalance] = useState('');
     const [loadingConnect, setLoadingConnect] = useState(false);
 
