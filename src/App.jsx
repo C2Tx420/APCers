@@ -7,7 +7,7 @@ import NameTag from './components/NameTag/NameTag';
 function App() {
 
   return (
-    <NameTag></NameTag>
+      <NameTag/>
   )
 }
 export default App
