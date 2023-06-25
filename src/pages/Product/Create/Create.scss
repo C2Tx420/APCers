@@ -1,0 +1,15 @@
+@import '../../../assets/scss/mixin.scss';
+
+.create-nft {
+    &__type{
+        border-bottom: 1px solid #ccc;
+        padding: 20px 0;
+        &-title{
+            @include h2;
+            margin-bottom: 20px;
+        }
+    }
+    &__content{
+        padding: 20px 0;
+    }
+}
