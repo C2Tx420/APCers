@@ -212,7 +212,7 @@ export default function Home() {
   }, [])
 
   const teamlist = [
-    { name: 'Chung Từ', role: 'Supporter', img: '/assets/img/team/chung.png' },
+    // { name: 'Chung Từ', role: 'Supporter', img: '/assets/img/team/chung.png' },
     { name: 'Mỷ Trần', role: 'Team Lead', img: '/assets/img/team/my.jpg' },
     { name: 'Thịnh Lưu', role: 'Member', img: '/assets/img/team/tthinh.jpg' },
     { name: 'Thịnh Nguyễn', role: 'Member', img: '/assets/img/team/xthinh.jpg' },

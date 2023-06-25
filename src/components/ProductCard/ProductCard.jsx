@@ -9,7 +9,7 @@ export default function ProductCard({data,className}) {
 
     const handleGoTo = (e) => {
       e.stopPropagation();
-      navigate(`/product/${nftData.mint}`)
+      navigate(`/product/${data.list_state}`)
 
     }
   return (

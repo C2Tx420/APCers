@@ -42,6 +42,13 @@ export const ShyftService = {
       page: page,
       size: size,
     }),
+  getDetailNFTOfMarket: async(id) => {
+    return await shyft.marketplace.listing.detail({
+      network: Network.Devnet,
+      marketplaceAddress: import.meta.env.VITE_MARKET_ADDRESS,
+      listState: id
+    })
+  },
   createNFT: async (data, walletAddress) => {
     const { encoded_transaction } = await shyft.marketplace.listing.list({
       marketplaceAddress: import.meta.env.VITE_MARKET_ADDRESS,

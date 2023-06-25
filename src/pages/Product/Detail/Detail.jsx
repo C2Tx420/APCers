@@ -11,9 +11,8 @@ export default function Detail() {
   const { id } = useParams();
   useEffect(() => {
     (async () => {
+      // const product = await ShyftService.getDetailNFTOfMarket(id);
       // const nftList = await ShyftService.getActiveListings();
-      // const product = nftList.data.filter(item => item.nft_address === id)[0];
-      // console.log(product)
       // setProduct(product);
       // sortRelated(nftList.data);
       setProduct({
@@ -257,7 +256,7 @@ export default function Detail() {
     })();
   }, [])
   const sortRelated = (list) => {
-    const sortList = [...list].filter(item => item.nft_address !== id);
+    const sortList = [...list].filter(item => item.list_state !== id);
     setRelated(sortList);
   }
   return (
