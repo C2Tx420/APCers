@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Home.scss';
 import AmazeNFT from '../../components/AmazeNFT/AmazeNFT';
 import SignUpNFT from '../../components/SignUpNFT/SignUpNFT';
@@ -7,10 +7,13 @@ import Slider from 'react-slick';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { ShyftService } from '../../services/shyft.service';
 import useScrollTop from '../../hook/useScrollTop';
+import { LoadingContext } from '../../context/LoadingContext';
 
 export default function Home() {
 
   useScrollTop();
+
+  const {setLoading} = useContext(LoadingContext);
 
   const [listNFT, setListNFT] = useState([
     {
@@ -205,9 +208,15 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
+      setLoading(true);
+      try{
       // const getListNFT = await ShyftService.getActiveListings()
       // setListNFT(getListNFT.data)
       // console.log(getListNFT.data)
+      } catch(e) {
+        console.log(e)
+      }
+      setLoading(false);
     })();
   }, [])
 

@@ -1,86 +1,86 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ShyftService } from '../../../services/shyft.service';
 import { useParams } from 'react-router-dom';
 import './Detail.scss'
 import Button from '../../../components/Button/Button';
 import ProductCard from '../../../components/ProductCard/ProductCard';
+import { LoadingContext } from '../../../context/LoadingContext';
 
 export default function Detail() {
+  const {setLoading} = useContext(LoadingContext);
   const [product, setProduct] = useState(null);
   const [related, setRelated] = useState([]);
   const { id } = useParams();
   useEffect(() => {
     (async () => {
-      // const product = await ShyftService.getDetailNFTOfMarket(id);
-      // const nftList = await ShyftService.getActiveListings();
-      // setProduct(product);
-      // sortRelated(nftList.data);
-      setProduct({
-        "network": "devnet",
-        "marketplace_address": "BxRyen3PgGj5h7ENbP9PzyxiRh5ERVyac1QkDKksqEhD",
-        "seller_address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
-        "price": 200,
-        "currency_symbol": "MBE",
-        "nft_address": "GrunSuAGXc1LwZfrRAGiuvNtp1t61KLVAvkJzJ4sPwrd",
-        "nft": {
-          "name": "APC 2",
-          "symbol": "APC 2",
-          "royalty": 10,
-          "image_uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
-          "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
-          "animation_url": "",
-          "cached_animation_url": "",
-          "metadata_uri": "https://nftstorage.link/ipfs/bafkreifqgablzvf2xx6yjcdotfssfhnehi7k7jtadcqm22novnmf22gdpm",
-          "description": "APC 2 lorem lorem APC 2 lorem lorem APC 2 lorem lorem APC 2 lorem loremAPC 2 lorem lorem APC 2 lorem lorem",
-          "mint": "GrunSuAGXc1LwZfrRAGiuvNtp1t61KLVAvkJzJ4sPwrd",
-          "owner": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
-          "update_authority": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
-          "creators": [
-            {
-              "address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
-              "share": 100,
-              "verified": true
-            }
-          ],
-          "collection": {},
-          "attributes": {},
-          "attributes_array": [],
-          "files": [
-            {
-              "uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
-              "type": "image/jpeg"
-            }
-          ],
-          "external_url": "",
-          "is_loaded_metadata": true,
-          "primary_sale_happened": false,
-          "is_mutable": true,
-          "token_standard": "NonFungible"
-        },
-        "list_state": "3eiaPiiCmXoCzJABq1vYAnwBDXzfsHDS8DRTz5BvbGr4",
-        "status": "active",
-        "created_at": "2023-06-12T02:05:50.000Z",
-        "receipt": "6vtVmjjNp8P4oFoYoZSjmwio81HDwVDzSAbYF9nvFjux"
-      },)
-      sortRelated([
+      setLoading(true);
+      try{
+        setProduct({
+          "network": "devnet",
+          "marketplace_address": "BxRyen3PgGj5h7ENbP9PzyxiRh5ERVyac1QkDKksqEhD",
+          "seller_address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
+          "price": 200,
+          "currency_symbol": "MBE",
+          "nft_address": "sample",
+          "nft": {
+            "name": "Sample",
+            "symbol": "Sample",
+            "royalty": 10,
+            "image_uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+            "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+            "animation_url": "",
+            "cached_animation_url": "",
+            "metadata_uri": "https://nftstorage.link/ipfs/bafkreifqgablzvf2xx6yjcdotfssfhnehi7k7jtadcqm22novnmf22gdpm",
+            "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem lorem lorem",
+            "mint": "sample",
+            "owner": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
+            "update_authority": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
+            "creators": [
+              {
+                "address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
+                "share": 100,
+                "verified": true
+              }
+            ],
+            "collection": {},
+            "attributes": {},
+            "attributes_array": [],
+            "files": [
+              {
+                "uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+                "type": "image/jpeg"
+              }
+            ],
+            "external_url": "",
+            "is_loaded_metadata": true,
+            "primary_sale_happened": false,
+            "is_mutable": true,
+            "token_standard": "NonFungible"
+          },
+          "list_state": "sample",
+          "status": "active",
+          "created_at": "2023-06-12T02:05:50.000Z",
+          "receipt": "6vtVmjjNp8P4oFoYoZSjmwio81HDwVDzSAbYF9nvFjux"
+        })
+        sortRelated([
           {
             "network": "devnet",
             "marketplace_address": "BxRyen3PgGj5h7ENbP9PzyxiRh5ERVyac1QkDKksqEhD",
             "seller_address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
             "price": 200,
             "currency_symbol": "MBE",
-            "nft_address": "GrunSuAGXc1LwZfrRAGiuvNtp1t61KLVAvkJzJ4sPwrd",
+            "nft_address": "123123123",
             "nft": {
-              "name": "APC 2",
-              "symbol": "APC 2",
+              "name": "Sample",
+              "symbol": "Sample",
               "royalty": 10,
               "image_uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
               "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
               "animation_url": "",
               "cached_animation_url": "",
               "metadata_uri": "https://nftstorage.link/ipfs/bafkreifqgablzvf2xx6yjcdotfssfhnehi7k7jtadcqm22novnmf22gdpm",
-              "description": "APC 2 lorem lorem APC 2 lorem lorem APC 2 lorem lorem APC 2 lorem loremAPC 2 lorem lorem APC 2 lorem lorem",
-              "mint": "GrunSuAGXc1LwZfrRAGiuvNtp1t61KLVAvkJzJ4sPwrd",
+              "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem lorem lorem",
+              "mint": "123123123",
               "owner": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "update_authority": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "creators": [
@@ -105,7 +105,7 @@ export default function Detail() {
               "is_mutable": true,
               "token_standard": "NonFungible"
             },
-            "list_state": "3eiaPiiCmXoCzJABq1vYAnwBDXzfsHDS8DRTz5BvbGr4",
+            "list_state": "123123",
             "status": "active",
             "created_at": "2023-06-12T02:05:50.000Z",
             "receipt": "6vtVmjjNp8P4oFoYoZSjmwio81HDwVDzSAbYF9nvFjux"
@@ -116,18 +116,18 @@ export default function Detail() {
             "seller_address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
             "price": 200,
             "currency_symbol": "MBE",
-            "nft_address": "6UQP11U8fcL21542okj7hKWGJPd7bTYKEWuxctf1AiLT",
+            "nft_address": "123123123",
             "nft": {
-              "name": "Chung",
-              "symbol": "Chung",
+              "name": "Sample",
+              "symbol": "Sample",
               "royalty": 10,
-              "image_uri": "https://nftstorage.link/ipfs/bafkreiare34pw4qgx3wndozvx3hh73u2zzpicvdtlq7bazi6zbrn7zxwym",
-              "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreiare34pw4qgx3wndozvx3hh73u2zzpicvdtlq7bazi6zbrn7zxwym",
+              "image_uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+              "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
               "animation_url": "",
               "cached_animation_url": "",
-              "metadata_uri": "https://nftstorage.link/ipfs/bafkreidq4c5ywxmg2iwqr3cjaaudzo2el2wci6dgzwuk3kxjsnb6hsum3y",
-              "description": "Chung",
-              "mint": "6UQP11U8fcL21542okj7hKWGJPd7bTYKEWuxctf1AiLT",
+              "metadata_uri": "https://nftstorage.link/ipfs/bafkreifqgablzvf2xx6yjcdotfssfhnehi7k7jtadcqm22novnmf22gdpm",
+              "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem lorem lorem",
+              "mint": "123123123",
               "owner": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "update_authority": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "creators": [
@@ -142,7 +142,7 @@ export default function Detail() {
               "attributes_array": [],
               "files": [
                 {
-                  "uri": "https://nftstorage.link/ipfs/bafkreiare34pw4qgx3wndozvx3hh73u2zzpicvdtlq7bazi6zbrn7zxwym",
+                  "uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
                   "type": "image/jpeg"
                 }
               ],
@@ -152,10 +152,10 @@ export default function Detail() {
               "is_mutable": true,
               "token_standard": "NonFungible"
             },
-            "list_state": "Gqvvsg2m5g4oBiDVqknHCYkgqoVTaWfEWYRDZekDsKE3",
+            "list_state": "123123",
             "status": "active",
-            "created_at": "2023-06-12T02:07:37.000Z",
-            "receipt": "8wNy1XsgjpkWkENm5pzVbSYEGzxinYjVkc2n8iuB3bh4"
+            "created_at": "2023-06-12T02:05:50.000Z",
+            "receipt": "6vtVmjjNp8P4oFoYoZSjmwio81HDwVDzSAbYF9nvFjux"
           },
           {
             "network": "devnet",
@@ -163,18 +163,18 @@ export default function Detail() {
             "seller_address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
             "price": 200,
             "currency_symbol": "MBE",
-            "nft_address": "9bHeoKaM22d7EGaco8RCY85KuquEu8TeLSDWatvs65F8",
+            "nft_address": "123123123",
             "nft": {
-              "name": "My",
-              "symbol": "My",
+              "name": "Sample",
+              "symbol": "Sample",
               "royalty": 10,
-              "image_uri": "https://nftstorage.link/ipfs/bafkreia7wyp26pbcc6oh3mvmsgk55xv6jxmgnpe5pwd6hr6kpqdxvpc6tu",
-              "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreia7wyp26pbcc6oh3mvmsgk55xv6jxmgnpe5pwd6hr6kpqdxvpc6tu",
+              "image_uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+              "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
               "animation_url": "",
               "cached_animation_url": "",
-              "metadata_uri": "https://nftstorage.link/ipfs/bafkreid4sofuitlwwbqnszikjzc42qiizblvy5ptf4k5eaqteghzi6fnja",
-              "description": "My",
-              "mint": "9bHeoKaM22d7EGaco8RCY85KuquEu8TeLSDWatvs65F8",
+              "metadata_uri": "https://nftstorage.link/ipfs/bafkreifqgablzvf2xx6yjcdotfssfhnehi7k7jtadcqm22novnmf22gdpm",
+              "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem lorem lorem",
+              "mint": "123123123",
               "owner": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "update_authority": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "creators": [
@@ -189,8 +189,8 @@ export default function Detail() {
               "attributes_array": [],
               "files": [
                 {
-                  "uri": "https://nftstorage.link/ipfs/bafkreia7wyp26pbcc6oh3mvmsgk55xv6jxmgnpe5pwd6hr6kpqdxvpc6tu",
-                  "type": "image/png"
+                  "uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+                  "type": "image/jpeg"
                 }
               ],
               "external_url": "",
@@ -199,10 +199,10 @@ export default function Detail() {
               "is_mutable": true,
               "token_standard": "NonFungible"
             },
-            "list_state": "Dw61u3Sf91Biu9qpFFN5SRDD49XLJcZMma61hEZd4jhC",
+            "list_state": "123123",
             "status": "active",
-            "created_at": "2023-06-12T12:48:14.000Z",
-            "receipt": "EAnm6BsVLbSTKuaCcV4SjnhsYbFZUk1G4BvDwn5k2kWs"
+            "created_at": "2023-06-12T02:05:50.000Z",
+            "receipt": "6vtVmjjNp8P4oFoYoZSjmwio81HDwVDzSAbYF9nvFjux"
           },
           {
             "network": "devnet",
@@ -210,18 +210,18 @@ export default function Detail() {
             "seller_address": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
             "price": 200,
             "currency_symbol": "MBE",
-            "nft_address": "9bHeoKaM22d7EGaco8RCY85KuquEu8TeLSDWatvs65F8",
+            "nft_address": "123123123",
             "nft": {
-              "name": "My",
-              "symbol": "My",
+              "name": "Sample",
+              "symbol": "Sample",
               "royalty": 10,
-              "image_uri": "https://nftstorage.link/ipfs/bafkreia7wyp26pbcc6oh3mvmsgk55xv6jxmgnpe5pwd6hr6kpqdxvpc6tu",
-              "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreia7wyp26pbcc6oh3mvmsgk55xv6jxmgnpe5pwd6hr6kpqdxvpc6tu",
+              "image_uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+              "cached_image_uri": "https://cdn.shyft.to/img/https%253A%252F%252Fnftstorage.link%252Fipfs%252Fbafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
               "animation_url": "",
               "cached_animation_url": "",
-              "metadata_uri": "https://nftstorage.link/ipfs/bafkreid4sofuitlwwbqnszikjzc42qiizblvy5ptf4k5eaqteghzi6fnja",
-              "description": "My",
-              "mint": "9bHeoKaM22d7EGaco8RCY85KuquEu8TeLSDWatvs65F8",
+              "metadata_uri": "https://nftstorage.link/ipfs/bafkreifqgablzvf2xx6yjcdotfssfhnehi7k7jtadcqm22novnmf22gdpm",
+              "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem lorem lorem",
+              "mint": "123123123",
               "owner": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "update_authority": "2EDW3poG156KuZxN9jdgGVsLkKvBjnaRyod2ymxDRALd",
               "creators": [
@@ -236,8 +236,8 @@ export default function Detail() {
               "attributes_array": [],
               "files": [
                 {
-                  "uri": "https://nftstorage.link/ipfs/bafkreia7wyp26pbcc6oh3mvmsgk55xv6jxmgnpe5pwd6hr6kpqdxvpc6tu",
-                  "type": "image/png"
+                  "uri": "https://nftstorage.link/ipfs/bafkreihfbd6dxdh5ggbjrwfqdrfqp67h7yn3ls3fkye5x4ovms4e5xtexu",
+                  "type": "image/jpeg"
                 }
               ],
               "external_url": "",
@@ -246,13 +246,21 @@ export default function Detail() {
               "is_mutable": true,
               "token_standard": "NonFungible"
             },
-            "list_state": "Dw61u3Sf91Biu9qpFFN5SRDD49XLJcZMma61hEZd4jhC",
+            "list_state": "123123",
             "status": "active",
-            "created_at": "2023-06-12T12:48:14.000Z",
-            "receipt": "EAnm6BsVLbSTKuaCcV4SjnhsYbFZUk1G4BvDwn5k2kWs"
+            "created_at": "2023-06-12T02:05:50.000Z",
+            "receipt": "6vtVmjjNp8P4oFoYoZSjmwio81HDwVDzSAbYF9nvFjux"
           }
-        ]
-      )
+          ]
+        )
+        // const product = await ShyftService.getDetailNFTOfMarket(id);
+        // const nftList = await ShyftService.getActiveListings();
+        // setProduct(product);
+        // sortRelated(nftList.data);
+      } catch(e) {
+        console.log(e)
+      }
+      setLoading(false);
     })();
   }, [])
   const sortRelated = (list) => {

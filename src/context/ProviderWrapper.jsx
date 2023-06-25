@@ -1,10 +1,13 @@
 import React from 'react'
 import WalletProvider from './WalletContext'
+import LoadingProvider from './LoadingContext'
 
-export default function ProviderWrapper({children}) {
+export default function ProviderWrapper({ children }) {
   return (
-    <WalletProvider>
+    <LoadingProvider>
+      <WalletProvider>
         {children}
-    </WalletProvider>
+      </WalletProvider>
+    </LoadingProvider>
   )
 }
