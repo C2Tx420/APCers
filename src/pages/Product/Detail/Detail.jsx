@@ -11,7 +11,11 @@ export default function Detail() {
   const { id } = useParams();
   useEffect(() => {
     (async () => {
-      // const nft = await ShyftService.getNftbyMint(id)
+      // const nftList = await ShyftService.getActiveListings();
+      // const product = nftList.data.filter(item => item.nft_address === id)[0];
+      // console.log(product)
+      // setProduct(product);
+      // sortRelated(nftList.data);
       setProduct({
         "network": "devnet",
         "marketplace_address": "BxRyen3PgGj5h7ENbP9PzyxiRh5ERVyac1QkDKksqEhD",
