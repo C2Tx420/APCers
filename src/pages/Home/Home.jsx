@@ -6,8 +6,11 @@ import HumanCard from '../../components/HumanCard/HumanCard';
 import Slider from 'react-slick';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { ShyftService } from '../../services/shyft.service';
+import useScrollTop from '../../hook/useScrollTop';
 
 export default function Home() {
+
+  useScrollTop();
 
   const [listNFT, setListNFT] = useState([
     {
@@ -227,6 +230,9 @@ export default function Home() {
   };
   return (
     <main className="home">
+      {/* <section className="airdrop-section container">
+        <AirdropComponent />
+      </section> */}
       <section className="amaze-section container-fluid">
         <AmazeNFT />
       </section>
