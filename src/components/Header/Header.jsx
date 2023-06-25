@@ -5,6 +5,7 @@ import { WalletService } from '../../services/wallet.service';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShyftService } from '../../services/shyft.service';
 import { WalletContext } from '../../context/WalletContext';
+import { LoadingContext } from '../../context/LoadingContext';
 export default function Header() {
     const navigate = useNavigate();
     const { walletAddress, setWalletAddress } = useContext(WalletContext);
@@ -13,20 +14,26 @@ export default function Header() {
 
     useEffect(() => {
         (async () => {
+            setLoadingConnect(true);
             if (walletAddress && !walletBalance) {
-                // getBalance(walletAddress);
-                setWalletBalance({
-                    "address": "5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6",
-                    "balance": 100,
-                    "associated_account": "9ZeBHgQoVemfJC2jEt8yRmXetWYhaE1U9ktifVGitUho",
-                    "info": {
-                        "name": "Mungbean",
-                        "symbol": "MBE",
-                        "image": "https://nftstorage.link/ipfs/bafkreifcspzy7hibi7dzo5rxjjfy7nkbfgj2njs2oky5skt4rn7gq2lgoa",
-                        "decimals": 9
-                    }
-                });
+                try {
+                    // await getBalance(walletAddress);
+                    setWalletBalance({
+                        "address": "5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6",
+                        "balance": 100,
+                        "associated_account": "9ZeBHgQoVemfJC2jEt8yRmXetWYhaE1U9ktifVGitUho",
+                        "info": {
+                            "name": "Mungbean",
+                            "symbol": "MBE",
+                            "image": "https://nftstorage.link/ipfs/bafkreifcspzy7hibi7dzo5rxjjfy7nkbfgj2njs2oky5skt4rn7gq2lgoa",
+                            "decimals": 9
+                        }
+                    });
+                } catch (e) {
+                    console.log(e);
+                }
             }
+            setLoadingConnect(false);
         })();
 
     }, [])
@@ -44,7 +51,7 @@ export default function Header() {
 
     const getBalance = async (walletAddress) => {
         // const balance = await ShyftService.getBalance(walletAddress)
-        // setWalletBalance(balance);
+        // return setWalletBalance(balance);
         setWalletBalance({
             "address": "5Ab6Q8TL2qgzEQNnnbYYk4SLeKTiV5qRYyoaJ7bCc2v6",
             "balance": 100,
@@ -62,8 +69,12 @@ export default function Header() {
         setLoadingConnect(true);
         const wallet = await WalletService.solanaConnect();
         if (wallet) {
-            setWalletAddress(wallet);
-            getBalance(wallet.address)
+            try{
+                await setWalletAddress(wallet);
+                await getBalance(wallet)
+            } catch(e) {
+                console.log(e)
+            }
         }
         setLoadingConnect(false);
     }
