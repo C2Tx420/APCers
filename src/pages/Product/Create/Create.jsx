@@ -1,11 +1,20 @@
-import { Form, Input, Radio } from "antd";
-import React, { useState } from "react";
+import { PlusOutlined } from "@ant-design/icons";
+import { Form, Input, InputNumber, Radio, Upload } from "antd";
+import { useState } from "react";
 import Button from "../../../components/Button";
 import { CustomService } from "../../../services/custom.service";
 import "./Create.scss";
 
 export default function Create() {
   const [type, setType] = useState("create");
+  const [file, setFile] = useState([]);
+  const [image, setImage] = useState("");
+  const beforceUpload = async (fileUpload) => {
+    setFile([fileUpload]);
+    const base64code = await CustomService.getBase64(fileUpload);
+    setImage(base64code);
+    return false;
+  };
   const createFormList = [
     {
       name: "name",
@@ -29,8 +38,77 @@ export default function Create() {
       ],
       children: <Input />,
     },
+    {
+      name: "description",
+      label: "Description",
+      rule: [
+        {
+          required: true,
+          message: "Please input NFT description!",
+        },
+      ],
+      children: <Input.TextArea />,
+    },
+    {
+      name: "royalty",
+      label: "Royalty",
+      initialValue: 10,
+      rule: [
+        {
+          required: true,
+          message: "Please input NFT royalty!",
+        },
+      ],
+      children: <InputNumber min={1} />,
+    },
+    {
+      name: "price",
+      label: "Price",
+      initialValue: 0,
+      rule: [
+        {
+          required: true,
+          message: "Please input NFT price!",
+        },
+      ],
+      children: <InputNumber min={1} addonAfter="MBE" />,
+    },
+    {
+      name: "file",
+      label: "Image",
+      rule: [
+        {
+          required: true,
+          message: "Please input NFT image!",
+        },
+      ],
+      children: (
+        <>
+          {image ? (
+            <div className="preview-img">
+              <img src={image} alt="preview image" />
+              {/* <p>uploaded</p> */}
+            </div>
+          ) : (
+            <Upload
+              beforeUpload={beforceUpload}
+              fileList={file}
+              listType="picture-card"
+              showUploadList={false}
+            >
+              <div>
+                <PlusOutlined />
+                <div style={{ marginTop: 8 }}>Upload</div>
+              </div>
+            </Upload>
+          )}
+        </>
+      ),
+    },
   ];
   const handleSubmit = (value) => {
+    console.log(value);
+    console.log(value.file.file);
     console.log("aaa");
   };
   const handleSubmitFail = (errorInfo) => {
@@ -48,7 +126,9 @@ export default function Create() {
           optionType="button"
         >
           <Radio value={"create"}>Create</Radio>
-          <Radio value={"upload"}>Upload</Radio>
+          <Radio value={"upload"} disabled>
+            Upload
+          </Radio>
         </Radio.Group>
       </div>
       <div className="create-nft__content">
@@ -62,11 +142,13 @@ export default function Create() {
             onFinishFailed={handleSubmitFail}
             autoComplete="off"
           >
-            {createFormList.map((formItem, key) => (
+            {createFormList.map((formItem, idx) => (
               <Form.Item
+                key={idx}
                 label={formItem.label}
                 name={formItem.name}
                 rules={formItem.rule}
+                initialValue={formItem.initialValue || ""}
               >
                 {formItem.children}
               </Form.Item>
