@@ -42,22 +42,28 @@ export const ShyftService = {
       page: page,
       size: size,
     }),
-  getDetailNFTOfMarket: async(id) => {
+  getDetailNFTOfMarket: async (id) => {
     return await shyft.marketplace.listing.detail({
       network: Network.Devnet,
       marketplaceAddress: import.meta.env.VITE_MARKET_ADDRESS,
-      listState: id
-    })
+      listState: id,
+    });
   },
   createNFT: async (data, walletAddress) => {
-    const { encoded_transaction } = await shyft.marketplace.listing.list({
-      marketplaceAddress: import.meta.env.VITE_MARKET_ADDRESS,
-      nftAddress: "7Ros6azxoYakj3agxZetDwTWySftQeYXRXAKYWgXTWvw",
-      price: price,
-      sellerWallet: walletAddress,
-      isGasLess: true,
+    const nftCreate = await shyft.nft.createV2({
+      network: Network.Devnet,
+      creatorWallet: walletAddress,
+      ...data,
     });
-    return encoded_transaction;
+    console.log(nftCreate);
+    // const { encoded_transaction } = await shyft.marketplace.listing.list({
+    //   marketplaceAddress: import.meta.env.VITE_MARKET_ADDRESS,
+    //   nftAddress: "7Ros6azxoYakj3agxZetDwTWySftQeYXRXAKYWgXTWvw",
+    //   price: price,
+    //   sellerWallet: walletAddress,
+    //   isGasLess: true,
+    // });
+    // return encoded_transaction;
   },
   getNftbyMint: async (id) => await shyft.nft.getNftByMint({ mint: id }),
   signContract: async (encodedTransaction) => {
