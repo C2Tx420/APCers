@@ -3,7 +3,7 @@ import "./HumanCard.scss";
 export default function HumanCard({ img, name, role, desc }) {
   return (
     <div className="humancard">
-      <img src={`https://drive.google.com/uc?export=view&id=${img}`} alt="" />
+      <img src={img} alt="" />
       <div className="humancard__bottom">
         <p className="name">{name}</p>
         <div className="role">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Home.scss';
 import AmazeNFT from '../../components/AmazeNFT/AmazeNFT';
 import SignUpNFT from '../../components/SignUpNFT/SignUpNFT';
@@ -6,9 +6,14 @@ import HumanCard from '../../components/HumanCard/HumanCard';
 import Slider from 'react-slick';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { ShyftService } from '../../services/shyft.service';
-import NFTmarket from '../../components/NFTmarket/NFTmarket';
+import useScrollTop from '../../hook/useScrollTop';
+import { LoadingContext } from '../../context/LoadingContext';
 
 export default function Home() {
+
+  useScrollTop();
+
+  const {setLoading} = useContext(LoadingContext);
 
   const [listNFT, setListNFT] = useState([
     {
@@ -203,20 +208,26 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
+      setLoading(true);
+      try{
       // const getListNFT = await ShyftService.getActiveListings()
       // setListNFT(getListNFT.data)
       // console.log(getListNFT.data)
+      } catch(e) {
+        console.log(e)
+      }
+      setLoading(false);
     })();
   }, [])
 
   const teamlist = [
-    { name: 'Chung Từ', role: 'Supporter', img: '1tO9EElzDUpB4q2eMTc2xgKDzKZNWjNny' },
-    { name: 'Mỷ Trần', role: 'Team Lead', img: '1s3iVHHaAk_AMCy8pazmAO9vMUwZ72N4G' },
-    { name: 'Thịnh Lưu', role: 'Member', img: '1m5YNNr8gc-IZsbTy421vK-1_sGSehuca' },
-    { name: 'Thịnh Nguyễn', role: 'Member', img: '16xcJVQAVntsy25DmfbLbAk0BiJ7NR4sg' },
-    { name: 'Thông Võ', role: 'Member', img: '1B0C9ug_jusSA4T_z8uVeLA32O6gIeEGj' },
-    { name: 'Tài Huỳnh', role: 'Member', img: '1nAvgUe28tX9Ak9Df4EdhkdjuePwBFVB0' },
-    { name: 'Vinh Đỗ', role: 'Member', img: '10X1W_r7yZK4qii26BINGydyBpLertiVo' },
+    // { name: 'Chung Từ', role: 'Supporter', img: '/assets/img/team/chung.png' },
+    { name: 'Mỷ Trần', role: 'Team Lead', img: '/assets/img/team/my.jpg' },
+    { name: 'Thịnh Lưu', role: 'Member', img: '/assets/img/team/tthinh.jpg' },
+    { name: 'Thịnh Nguyễn', role: 'Member', img: '/assets/img/team/xthinh.jpg' },
+    { name: 'Thông Võ', role: 'Member', img: '/assets/img/team/thong.jpg' },
+    { name: 'Tài Huỳnh', role: 'Member', img: '/assets/img/team/tai.jpg' },
+    { name: 'Vinh Đỗ', role: 'Member', img: '/assets/img/team/vinh.jpg' },
   ]
 
   const sliderSetting = {
@@ -228,6 +239,9 @@ export default function Home() {
   };
   return (
     <main className="home">
+      {/* <section className="airdrop-section container">
+        <AirdropComponent />
+      </section> */}
       <section className="amaze-section container-fluid">
         <AmazeNFT />
       </section>

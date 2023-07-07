@@ -1,10 +1,10 @@
 import React from 'react'
 import './Button.scss'
 
-export default function Button({ size = 'm', color = 'colored', onClick, disable, children }) {
+export default function Button({ size = 'm', color = 'colored', onClick, disable,className = '', children }) {
     return (
         <>
-            <button className={`${size} ${color} ${disable ? 'disable' : ''} btn`} onClick={onClick} >{children}</button>
+            <button className={`${size} ${color} ${disable ? 'disable' : ''} ${className} btn`} onClick={onClick} >{children}</button>
         </>
     )
 }
